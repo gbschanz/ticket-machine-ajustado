@@ -1,104 +1,107 @@
-# Especificação - Ticket Machine
+# Especificação da Máquina de Venda de Bilhetes
 
-**Autor:** Calebe de Paula Bianchini
+## Requisitos
 
-## 1. Requisitos
-
-As estações de trem frequentemente fornecem máquinas de vender bilhetes que imprimem um bilhete quando um cliente insere a quantia correta para pagar a passagem. As máquinas mantêm uma soma total da quantidade de dinheiro que coletou durante toda sua operação.
+As estações de trem frequentemente fornecem máquinas de vender bilhetes que imprimem um bilhete quando um cliente insere a quantia correta para pagar a passagem. As máquinas mantêm um registro total da quantidade de dinheiro que coletou durante toda sua operação.
 
 ### 1.1 Catálogo dos Atores
 
-| Ator    | Descrição                      |
-|---------|--------------------------------|
-| Cliente | Usuário da máquina de vender bilhetes. |
+| Ator    | Descrição                         |
+|---------|-----------------------------------|
+| Cliente | Usuário da máquina de venda de bilhetes. |
 
 ### 1.2 Diagrama dos Casos de Uso
 
-*(Inserir imagem do diagrama de casos de uso aqui)*
+*(Adicione aqui o diagrama gráfico dos casos de uso, representando os casos de uso e seus atores.)*
 
 ### 1.3 Especificação dos Casos de Uso
 
-#### 1.3.1 CSU01 – Inserir Dinheiro
+#### CSU01 – Inserir dinheiro
 
-| Campo             | Descrição                                                                 |
-|-------------------|---------------------------------------------------------------------------|
-| **Identificador**  | CSU01                                                                     |
-| **Nome**          | Inserir Dinheiro                                                          |
-| **Atores**        | Cliente                                                                   |
-| **Sumário**       | Uma quantia de dinheiro é inserida na máquina. É importante ressaltar que essa quantia sempre é representada por uma única nota de papel-moeda. |
-| **Complexidade**  | Médio                                                                     |
-| **Regras de Negócio** | N/D                                                                   |
-| **Pré-condições** | N/D                                                                       |
-| **Pós-condição**  | O valor inserido é adicionado ao saldo total disponível.                  |
-| **Pontos de Inclusão** | N/D                                                                  |
-| **Pontos de Extensão** | N/D                                                                  |
+- **Identificador**: CSU01  
+- **Nome**: Inserir dinheiro  
+- **Atores**: Cliente  
+- **Sumário**: Uma quantia de dinheiro é inserida na máquina. Nota-se que essa quantia sempre é representada por uma única nota de papel-moeda.
+- **Complexidade**: Média  
+- **Regras de Negócio**: N/D  
+- **Pré-condições**: O sistema está ligado e pronto para aceitar uma nota de papel-moeda.
+- **Pós-condição**: O valor inserido é adicionado ao saldo disponível da máquina.
 
-##### Fluxo Principal
+##### Fluxo Principal:
 
-| Ações do Ator                           | Ações do Sistema                                                  |
-|-----------------------------------------|-------------------------------------------------------------------|
-| 1. O Cliente insere uma nota de papel-moeda. | 2. O Sistema mostra uma mensagem informando para o Cliente aguardar alguns instantes. |
-|                                         | 3. O Sistema valida a nota de papel-moeda inserida.                |
-|                                         | 4. O Sistema adiciona o valor ao saldo disponível.                 |
-|                                         | 5. O Sistema informa que a nota de papel-moeda foi aceita.         |
-|                                         | 6. O Sistema informa o saldo atual. Caso de Uso é encerrado.       |
+| Ações do Ator                                | Ações do Sistema                                      |
+|----------------------------------------------|------------------------------------------------------|
+| 1. O Cliente insere uma nota de papel-moeda. | 2. O Sistema exibe uma mensagem pedindo ao cliente para aguardar. |
+|                                              | 3. O Sistema valida a nota de papel-moeda.           |
+|                                              | 4. O Sistema adiciona o valor ao saldo disponível.   |
+|                                              | 5. O Sistema informa que a nota foi aceita.          |
+|                                              | 6. O Sistema exibe o saldo atual e encerra o caso de uso. |
 
-##### Fluxo de Exceção 1: Nota de Papel-moeda Inválida
+##### Fluxo Alternativo 1: Nota inválida
 
-| Ações do Ator                           | Ações do Sistema                                                  |
-|-----------------------------------------|-------------------------------------------------------------------|
-|                                         | 1. O Sistema devolve a nota de papel-moeda.                       |
-|                                         | 2. Enquanto o Cliente não retirar a nota de papel-moeda, o Sistema informa que a nota é inválida. |
-| 3. O Cliente retira a nota de papel-moeda. | 4. Volta ao passo 6 do Fluxo Principal.                           |
+- **3a.** O Sistema não valida a nota de papel-moeda.
 
-#### 1.3.2 CSU02 – Solicitar Bilhete
+| Ações do Ator                           | Ações do Sistema                                      |
+|-----------------------------------------|------------------------------------------------------|
+|                                         | 1. O Sistema devolve a nota de papel-moeda.          |
+| 1. O Cliente retira a nota.             | 2. O Sistema informa que a nota é inválida.          |
+|                                         | 3. O sistema retorna ao passo 6 do fluxo principal.  |
 
-| Campo             | Descrição                                                                 |
-|-------------------|---------------------------------------------------------------------------|
-| **Identificador**  | CSU02                                                                     |
-| **Nome**          | Solicitar Bilhete                                                         |
-| **Atores**        | Cliente                                                                   |
-| **Sumário**       | Um único bilhete de transporte é impresso.                                |
-| **Complexidade**  | Fácil                                                                     |
-| **Regras de Negócio** | N/D                                                                   |
-| **Pré-condições** | N/D                                                                       |
-| **Pós-condição**  | Um bilhete é impresso e seu valor é debitado do saldo disponível.         |
-| **Pontos de Inclusão** | N/D                                                                  |
-| **Pontos de Extensão** | N/D                                                                  |
+---
 
-##### Fluxo Principal
+#### CSU02 – Solicitar bilhete
 
-| Ações do Ator                           | Ações do Sistema                                                  |
-|-----------------------------------------|-------------------------------------------------------------------|
-| 1. O Cliente solicita impressão do bilhete de transporte. | 2. O Sistema verifica o saldo e emite o bilhete.                    |
-|                                         | 3. O Sistema informa o saldo atual. Caso de Uso é encerrado.       |
+- **Identificador**: CSU02  
+- **Nome**: Solicitar bilhete  
+- **Atores**: Cliente  
+- **Sumário**: O cliente solicita a impressão de um bilhete de transporte. O sistema verifica se o saldo disponível é suficiente para cobrir o valor do bilhete, deduz o valor do saldo e imprime o bilhete.
+- **Complexidade**: Baixa  
+- **Regras de Negócio**: N/D  
+- **Pré-condições**: O saldo disponível é suficiente para a compra do bilhete.
+- **Pós-condição**: O bilhete é impresso e o valor do bilhete é debitado do saldo disponível.
 
-##### Fluxo de Exceção 1: Saldo Insuficiente
+##### Fluxo Principal:
 
-| Ações do Ator                           | Ações do Sistema                                                  |
-|-----------------------------------------|-------------------------------------------------------------------|
-|                                         | 1. O Sistema informa que o saldo é insuficiente.                  |
-|                                         | 2. Volta ao passo 3 do Fluxo Principal.                           |
+| Ações do Ator                          | Ações do Sistema                                      |
+|----------------------------------------|------------------------------------------------------|
+| 1. O Cliente solicita um bilhete.      | 2. O Sistema verifica o saldo disponível.            |
+|                                        | 3. O Sistema emite o bilhete e deduz o valor do saldo. |
+|                                        | 4. O Sistema exibe o saldo atual e encerra o caso de uso. |
 
-#### 1.3.3 CSU03 – Solicitar Troco
+##### Fluxo Alternativo 1: Saldo insuficiente
 
-| Campo             | Descrição                                                                 |
-|-------------------|---------------------------------------------------------------------------|
-| **Identificador**  | CSU03                                                                     |
-| **Nome**          | Solicitar Troco                                                           |
-| **Atores**        | Cliente                                                                   |
-| **Sumário**       | O troco é devolvido. Vale ressaltar que o troco também é em nota de papel-moeda. |
-| **Complexidade**  | Fácil                                                                     |
-| **Regras de Negócio** | N/D                                                                   |
-| **Pré-condições** | N/D                                                                       |
-| **Pós-condição**  | O valor em nota de papel-moeda é devolvido e o saldo disponível é zerado. |
-| **Pontos de Inclusão** | N/D                                                                  |
-| **Pontos de Extensão** | N/D                                                                  |
+- **2a.** O saldo disponível é insuficiente para a compra do bilhete.
 
-##### Fluxo Principal
+| Ações do Ator                         | Ações do Sistema                                      |
+|---------------------------------------|------------------------------------------------------|
+|                                       | 1. O Sistema informa que o saldo é insuficiente.     |
+|                                       | 2. O sistema retorna ao passo 4 do fluxo principal.  |
 
-| Ações do Ator                           | Ações do Sistema                                                  |
-|-----------------------------------------|-------------------------------------------------------------------|
-| 1. O Cliente solicita devolução do saldo restante como troco. | 2. O Sistema verifica o saldo e devolve a quantidade do saldo em notas de papel-moeda. |
-|                                         | 3. O Sistema zera o valor do saldo.                               |
-|                                         | 4. O Sistema informa o saldo atual. Caso de Uso é encerrado.       |
+---
+
+#### CSU03 – Solicitar troco
+
+- **Identificador**: CSU03  
+- **Nome**: Solicitar troco  
+- **Atores**: Cliente  
+- **Sumário**: O cliente solicita o troco e o sistema devolve o saldo restante em notas de papel-moeda.
+- **Complexidade**: Baixa  
+- **Regras de Negócio**: N/D  
+- **Pré-condições**: O sistema possui saldo restante a ser devolvido.
+- **Pós-condição**: O valor total em dinheiro é devolvido e o saldo disponível é zerado.
+
+##### Fluxo Principal:
+
+| Ações do Ator                          | Ações do Sistema                                      |
+|----------------------------------------|------------------------------------------------------|
+| 1. O Cliente solicita o troco.         | 2. O Sistema verifica o saldo disponível.            |
+|                                        | 3. O Sistema devolve o saldo em notas de papel-moeda. |
+|                                        | 4. O Sistema zera o saldo e exibe uma mensagem com o saldo atual. Caso de uso é encerrado. |
+
+---
+
+### Ajustes Realizados
+1. Adição de pré-condições para cada caso de uso, garantindo que o sistema está em um estado correto antes do início da interação.
+2. Correção na descrição do fluxo alternativo "nota inválida" para garantir clareza no comportamento do sistema e ator.
+3. Detalhamento das ações do sistema e ator em todos os fluxos, com ênfase em estados pós-condicionais claros.
+4. Melhoria na formatação dos fluxos principais e alternativos para facilitar a compreensão do comportamento do sistema.

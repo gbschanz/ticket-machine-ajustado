@@ -20,7 +20,8 @@ As estações de trem frequentemente fornecem máquinas de vender bilhetes que i
 
 #### 1.3.1 CSU01 – Inserir Dinheiro
 
-
+| Campo             | Descrição                                                                 |
+|-------------------|---------------------------------------------------------------------------|
 | **Identificador**  | CSU01                                                                     |
 | **Nome**          | Inserir Dinheiro                                                          |
 | **Atores**        | Cliente                                                                   |
@@ -52,7 +53,8 @@ As estações de trem frequentemente fornecem máquinas de vender bilhetes que i
 
 #### 1.3.2 CSU02 – Solicitar Bilhete
 
-
+| Campo             | Descrição                                                                 |
+|-------------------|---------------------------------------------------------------------------|
 | **Identificador**  | CSU02                                                                     |
 | **Nome**          | Solicitar Bilhete                                                         |
 | **Atores**        | Cliente                                                                   |
@@ -80,7 +82,8 @@ As estações de trem frequentemente fornecem máquinas de vender bilhetes que i
 
 #### 1.3.3 CSU03 – Solicitar Troco
 
-
+| Campo             | Descrição                                                                 |
+|-------------------|---------------------------------------------------------------------------|
 | **Identificador**  | CSU03                                                                     |
 | **Nome**          | Solicitar Troco                                                           |
 | **Atores**        | Cliente                                                                   |

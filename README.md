@@ -105,7 +105,7 @@ Cada ticket possui o valor de 10 reais.
 
 ##### Fluxo Alternativo 1: Saldo insuficiente para troco
 
-- **2a.** O sistema não possui moeda para realizar o troco
+- O sistema não possui moeda para realizar o troco
 
 | Ações do Ator                         | Ações do Sistema                                      |
 |---------------------------------------|------------------------------------------------------|

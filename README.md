@@ -2,7 +2,9 @@
 
 ## Requisitos
 
-As estações de trem frequentemente fornecem máquinas de vender bilhetes que imprimem um bilhete quando um cliente insere a quantia correta para pagar a passagem. As máquinas mantêm um registro total da quantidade de dinheiro que coletou durante toda sua operação. Cada bilhete possui um custo de 5 reais.
+As estações de trem frequentemente fornecem máquinas de vender bilhetes que imprimem um bilhete quando um cliente insere a quantia correta para pagar a passagem. As máquinas mantêm um registro total da quantidade de dinheiro que coletou durante toda sua operação.
+
+São aceitas apenas notas de 2, 5, 10, 20, 50 e 100 reais.
 
 ### 1.1 Catálogo dos Atores
 

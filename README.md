@@ -102,4 +102,13 @@ Cada ticket possui o valor de 10 reais.
 |                                        | 3. O Sistema devolve o saldo em notas de papel-moeda. |
 |                                        | 4. O Sistema zera o saldo e exibe uma mensagem com o saldo atual. Caso de uso é encerrado. |
 
+##### Fluxo Alternativo 1: Saldo insuficiente para troco
+
+- **2a.** O sistema não possui moeda para realizar o troco
+
+| Ações do Ator                         | Ações do Sistema                                      |
+|---------------------------------------|------------------------------------------------------|
+|                                       | 1. O Sistema informa que o sistema não possui moeda.     |
+|                                       | 2. O sistema retorna ao passo 2 do fluxo principal.  |
+
 ---

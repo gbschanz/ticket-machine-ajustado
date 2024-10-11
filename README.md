@@ -3,6 +3,9 @@
 ## Requisitos
 
 As estações de trem frequentemente fornecem máquinas de vender bilhetes que imprimem um bilhete quando um cliente insere a quantia correta para pagar a passagem. As máquinas mantêm um registro total da quantidade de dinheiro que coletou durante toda sua operação.
+Cada ticket possui o valor de 10 reais.
+
+
 
 ### 1.1 Catálogo dos Atores
 

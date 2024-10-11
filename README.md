@@ -3,9 +3,9 @@
 ## Requisitos
 
 As estações de trem frequentemente fornecem máquinas de vender bilhetes que imprimem um bilhete quando um cliente insere a quantia correta para pagar a passagem. As máquinas mantêm um registro total da quantidade de dinheiro que coletou durante toda sua operação.
+
+São aceitas apenas notas de 2, 5, 10, 20, 50 e 100 reais.
 Cada ticket possui o valor de 10 reais.
-
-
 
 ### 1.1 Catálogo dos Atores
 
@@ -102,6 +102,7 @@ Cada ticket possui o valor de 10 reais.
 |                                        | 3. O Sistema devolve o saldo em notas de papel-moeda. |
 |                                        | 4. O Sistema zera o saldo e exibe uma mensagem com o saldo atual. Caso de uso é encerrado. |
 
+
 ##### Fluxo Alternativo 1: Saldo insuficiente para troco
 
 - **2a.** O sistema não possui moeda para realizar o troco
@@ -110,5 +111,6 @@ Cada ticket possui o valor de 10 reais.
 |---------------------------------------|------------------------------------------------------|
 |                                       | 1. O Sistema informa que o sistema não possui moeda.     |
 |                                       | 2. O sistema retorna ao passo 2 do fluxo principal.  |
+
 
 ---

@@ -100,9 +100,3 @@ As estações de trem frequentemente fornecem máquinas de vender bilhetes que i
 |                                        | 4. O Sistema zera o saldo e exibe uma mensagem com o saldo atual. Caso de uso é encerrado. |
 
 ---
-
-### Ajustes Realizados
-1. Adição de pré-condições para cada caso de uso, garantindo que o sistema está em um estado correto antes do início da interação.
-2. Correção na descrição do fluxo alternativo "nota inválida" para garantir clareza no comportamento do sistema e ator.
-3. Detalhamento das ações do sistema e ator em todos os fluxos, com ênfase em estados pós-condicionais claros.
-4. Melhoria na formatação dos fluxos principais e alternativos para facilitar a compreensão do comportamento do sistema.

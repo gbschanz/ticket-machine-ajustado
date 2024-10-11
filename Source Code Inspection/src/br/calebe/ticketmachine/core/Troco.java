@@ -19,7 +19,7 @@ class Troco {
         }
         papeisMoeda[5] = new PapelMoeda(100, count);
         count = 0;
-        while (valor % 50 != 0) {
+        while (valor >= 50) { 
             valor -= 50;
             count++;
         }
@@ -31,7 +31,7 @@ class Troco {
         }
         papeisMoeda[3] = new PapelMoeda(20, count);
         count = 0;
-        while (valor % 10 != 0) {
+        while (valor >= 10) { 
             valor -= 10;
             count++;
         }
@@ -43,7 +43,7 @@ class Troco {
         }
         papeisMoeda[1] = new PapelMoeda(5, count);
         count = 0;
-        while (valor % 2 != 0) {
+        while (valor >= 2) { 
             valor -= 2;
             count++;
         }
@@ -79,7 +79,7 @@ class Troco {
             PapelMoeda ret = null;
             if (hasNext()) {
                 ret = troco.papeisMoeda[currentIndex];
-                troco.papeisMoeda[currentIndex] = null; // Remove após pegar
+                troco.papeisMoeda[currentIndex] = null; 
             }
             return ret;
         }
